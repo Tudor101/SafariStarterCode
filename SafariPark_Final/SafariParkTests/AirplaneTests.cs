@@ -27,6 +27,14 @@ namespace SafariParkTests
         }
 
         [Test]
+        public void WhenAirplaneAscendsBy500_NewAltitudeShouldBe5001()
+        {
+            a.Ascend(500);
+            var actual = a.Altitude;
+            Assert.AreEqual(500, actual);
+        }
+
+        [Test]
         public void WhenAirplaneAscendsBy500_ThenDescendsby200_NewAltitudeShouldBe300()
         {
             a.Ascend(500);
